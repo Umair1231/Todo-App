@@ -1,6 +1,23 @@
+:root {
+  --primary-bg-color: peachpuff;
+  --primary-text-color: #333;
+  --button-bg-color: #007bff;
+  --button-text-color: #fff;
+  --border-color: #333;
+}
+
+.dark-theme {
+  --primary-bg-color: #333;
+  --primary-text-color: #fff;
+  --button-bg-color: #fff;
+  --button-text-color: #333;
+  --border-color: #ddd;
+}
+
+
 body
 {
-  background-color: blue;
+  
   margin: 0;
   padding: 0;
   display: flex;
@@ -13,9 +30,9 @@ body
   margin-right: auto;
   max-width: 1000px;
   padding: 10rem;
-  border: 2px solid peachpuff;
+  border: 2px solid var(--border-color);
   border-radius: 5px;
-  background-color: peachpuff;
+  background-color: var(--primary-bg-color);
 }
 
 .SubmitForm
@@ -28,18 +45,17 @@ body
 {
   width: auto;
   padding: 10px;
-  border: 2px solid #ddd;
+  border: 2px solid var(--border-color);
   border-radius: 2px  ;
 }
 .SubmitButton
 {
   margin-top: 10px;
-  background-color: #333;
-  color: #fff;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
   border: none;
   padding: 10px 20px;
   cursor: pointer;
-  border-radius: 5px;
   font-size: 18px;
 }
 /* Style the TodoTable */
@@ -51,15 +67,16 @@ body
 
 /* Style the table header */
 .TodoTable th {
-  background-color: #f2f2f2;
+  color: var(--primary-text-color);
   text-align: auto;
   padding: 10px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--border-color);
 }
 
 /* Style the table rows */
 .TodoItem {
-  border-bottom: 1px solid #ddd;
+  border: 1px solid var(--border-color);
+  color:var(--primary-text-color)
 }
 
 /* Style the Task column */
@@ -78,10 +95,9 @@ body
   padding: 5px 10px;
   margin-right: 5px;
   cursor: pointer;
-  background-color: #007bff;
-  color: #fff;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
   border: none;
-  border-radius: 5px;
   transition: background-color 0.3s;
 }
 

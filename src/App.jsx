@@ -4,10 +4,18 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import FormComponent from './Form'
 function App() {
-  const [count, setCount] = useState(0)
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+  const toggleTheme = () => 
+  {
+  setIsDarkTheme((prevTheme) => !prevTheme);
+  };
 
   return (
+    <div className={`App ${isDarkTheme ? 'dark-theme': ''}`}>
     <FormComponent />
+    <button onClick={toggleTheme}>Toggle Theme</button>
+    </div>
   )
 }
 
